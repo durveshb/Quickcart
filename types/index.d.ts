@@ -30,7 +30,11 @@ export type MarketingConfig = {
 export type SiteConfig = {
   name: string;
   description: string;
+  creater: string;
+  hosting: string;
   links: {
     github: string;
+    creater: string;
+    hosting: string;
   };
 };

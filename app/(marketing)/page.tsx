@@ -69,7 +69,7 @@ const page = () => {
             Experience Unrestricted Power with Our Pro Plan: Enjoy Comprehensive
             Access to All Features at a Single, Transparent Price.
           </p>
-          <div className="w-full flex-col sm:flex-row max-w-[64rem]  flex gap-6">
+          <div className="w-full flex-col md:flex-row max-w-[64rem]  flex gap-6">
             {marketingConfig.plans.map((plan) => (
               <div className="flex-1">
                 <SubscriptionCard plan={plan} />
