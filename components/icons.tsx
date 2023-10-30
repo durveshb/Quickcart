@@ -1,6 +1,7 @@
 import {
   AlertTriangle,
   ArrowRight,
+  ArrowLeft,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -61,4 +62,5 @@ export const Icons = {
   lightbulb: Lightbulb,
   shuffle: Shuffle,
   shieldCheck: ShieldCheck,
+  arrowLeft: ArrowLeft,
 };
