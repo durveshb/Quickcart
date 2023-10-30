@@ -12,7 +12,7 @@ interface MobileNavProps {
 
 const MobileNav = ({ items }: MobileNavProps) => {
   return (
-    <div className="fixed z-50 top-16 left-3 slide-in-from-bottom-96 shadow-md animate-in flex flex-col p-5 gap-6 w-[calc(100vw-1.5rem)] md:hidden">
+    <div className="fixed z-20 top-16 left-3 slide-in-from-bottom-96 shadow-md animate-in flex flex-col p-5 gap-6 w-[calc(100vw-1.5rem)] md:hidden bg-popover text-popover-foreground">
       <Link href="/" className="flex gap-2 font-bold">
         <Icons.logo />
         <span>{siteConfig.name}</span>
