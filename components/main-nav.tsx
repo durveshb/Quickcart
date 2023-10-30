@@ -16,7 +16,7 @@ interface MainNavProps {
 const MainNav = ({ items, children }: MainNavProps) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
-    <div className="container relative flex py-6 gap-10 items-center">
+    <div className="container relative flex py-6 gap-10 items-center bg-white dark:bg-transparent">
       <Link href="/" className="hidden md:flex gap-2 font-bold">
         <Icons.logo />
         <span>{siteConfig.name}</span>

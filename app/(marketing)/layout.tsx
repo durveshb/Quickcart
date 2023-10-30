@@ -5,7 +5,9 @@ import React from "react";
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen w-screen">
-      <MainNav items={marketingConfig.mainNav} />
+      <div className="sticky top-0">
+        <MainNav items={marketingConfig.mainNav} />
+      </div>
       {children}
     </div>
   );
