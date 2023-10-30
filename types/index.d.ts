@@ -27,6 +27,10 @@ export type MarketingConfig = {
   plans: SubscriptionPlan[];
 };
 
+export type DashboardConfig = {
+  mainNav: MainNavItem[];
+};
+
 export type SiteConfig = {
   name: string;
   description: string;

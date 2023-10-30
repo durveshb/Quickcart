@@ -23,7 +23,7 @@ export const authOptions: NextAuthOptions = {
           const { password } = parsedCredentials.data;
           const user = {
             id: "1",
-            name: "durvesh",
+            name: "Durvesh Bhalekar",
             username: "durvesh_admin",
             password: "durvesh_admin",
           };
@@ -36,4 +36,16 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  callbacks: {
+    jwt({ token, user }) {
+      if (user) {
+        token.username = user.username;
+      }
+      return token;
+    },
+    session({ token, session }) {
+      session.user.username = token.username;
+      return session;
+    },
+  },
 };
