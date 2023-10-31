@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Fragrance {
+  kesar_chandan
+  kesar
+  twilight
+  rose
+  pineapple
+  lemon
+  plain
+}
+
+enum Category {
+  incense_stick
+  camphor
+  home_care
+}
+
+enum Packaging {
+  round
+  box
+  pouch
+  zipper
+  bottle
+}
+
+enum Weight {
+  g50
+  g100
+  g200
+  ml50
+  ml100
+  ml200
+}
+
+model Product {
+  id        String    @default(uuid())
+  code      String    @id
+  name      String    @unique
+  category  Category
+  fragrance Fragrance
+  packaging Packaging
+  weight    Weight
+  price     String
+}
