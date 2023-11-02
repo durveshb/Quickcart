@@ -12,8 +12,8 @@ export default async function layout({
 }) {
   const user = await getCurrentUser();
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="sticky top-0">
+    <div className="h-screen flex flex-col">
+      <div className="sticky top-0 z-20 bg-background">
         <MainNav items={dashboardConfig.mainNav} />
         <div className="absolute right-12 top-4">
           <UserAccountNav
@@ -22,7 +22,7 @@ export default async function layout({
         </div>
         <div className="h-[1px] bg-foreground/20" />
       </div>
-      <div className="flex-grow">{children}</div>
+      <div className="grow">{children}</div>
       <Footer />
     </div>
   );
